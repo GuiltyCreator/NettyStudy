@@ -1,0 +1,11 @@
+netty:
+  websocket:
+    port: 84
+    ip: 0.0.0.0
+    max-frame-size: 10240
+    path: /channel
+
+server:
+  port: 8080
+  servlet:
+    context-path: /netty-service
