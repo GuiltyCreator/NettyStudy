@@ -37,6 +37,7 @@ public class ServerLastOutboundHandler extends ChannelOutboundHandlerAdapter {
         System.out.println("服务端要发送的消息是：\n"+respMsg);
         ByteBuf respByteBuf = Unpooled.copiedBuffer(respMsg.getBytes());
         ctx.write(respByteBuf);
-        ctx.flush(); //ctx.write()方法执行后，需要调用flush()方法才能令它立即执行
+        //ctx.write()方法执行后，需要调用flush()方法才能令它立即执行
+        ctx.flush();
     }
 }

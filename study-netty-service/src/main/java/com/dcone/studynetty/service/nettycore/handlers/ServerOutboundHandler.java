@@ -36,6 +36,7 @@ public class ServerOutboundHandler extends ChannelOutboundHandlerAdapter{
         String respMsg = body+"\n请问你需要操作什么任务";
         ByteBuf respByteBuf = Unpooled.copiedBuffer(respMsg.getBytes());
         ctx.write(respByteBuf);
-        ctx.flush(); //ctx.write()方法执行后，需要调用flush()方法才能令它立即执行
+        //ctx.write()方法执行后，需要调用flush()方法才能令它立即执行
+        ctx.flush();
     }
 }

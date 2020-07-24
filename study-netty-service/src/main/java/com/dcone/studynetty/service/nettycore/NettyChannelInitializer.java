@@ -57,6 +57,7 @@ public class NettyChannelInitializer extends ChannelInitializer<SocketChannel> {
         //ChannelPipeline是handler的任务组，里面有多个handler
         ChannelPipeline pipeline = socketChannel.pipeline();
         //逻辑处理类
+        //先执行OutboundHandler再执行InboundHandler
         pipeline.addLast(serverLastOutboundHandler);
         pipeline.addLast(serverOutboundHandler);
         pipeline.addLast(serverInboundHandler);
