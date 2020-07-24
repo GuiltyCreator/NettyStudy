@@ -13,8 +13,10 @@ import org.springframework.context.annotation.Configuration;
 import javax.annotation.Resource;
 
 /**
- * Netty
- * 服务端
+ * netty初始化
+ * @author Jesse
+ * @email xiaocpa@digitalchina.com
+ * @date 2020-7-22
  */
 @Slf4j
 @Configuration
@@ -73,8 +75,5 @@ public class NettyServer {
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
         }
-
     }
-
-
 }
